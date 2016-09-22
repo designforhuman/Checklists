@@ -9,21 +9,21 @@
 import UIKit
 
 
-protocol itemDetailViewControllerDelegate: class {
-    func itemDetailViewControllerDidCancel(controller: itemDetailViewController)
+protocol ItemDetailViewControllerDelegate: class {
+    func itemDetailViewControllerDidCancel(controller: ItemDetailViewController)
     
-    func itemDetailViewController(controller: itemDetailViewController, didFinishAddingItem item: ChecklistItem)
+    func itemDetailViewController(controller: ItemDetailViewController, didFinishAddingItem item: ChecklistItem)
     
-    func itemDetailViewController(controller: itemDetailViewController, didFinishEditingItem item: ChecklistItem)
+    func itemDetailViewController(controller: ItemDetailViewController, didFinishEditingItem item: ChecklistItem)
 }
 
 
-class itemDetailViewController: UITableViewController, UITextFieldDelegate {
+class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     
-    weak var delegate: itemDetailViewControllerDelegate?
+    weak var delegate: ItemDetailViewControllerDelegate?
     var itemToEdit: ChecklistItem?
     
     

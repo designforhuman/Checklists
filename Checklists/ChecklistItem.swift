@@ -14,7 +14,7 @@ class ChecklistItem: NSObject, NSCoding {
     var text = ""
     var checked = false
     
-    // required: ???
+    // required: ??? conform to NSCoding
     override init() {
         super.init()
     }
